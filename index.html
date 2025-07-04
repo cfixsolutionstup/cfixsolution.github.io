@@ -7,53 +7,64 @@
   <title>C Fix Solution</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f4f8;
-      color: #222;
-      line-height: 1.6;
+      background: #f2f7fc;
+      color: #1a1a1a;
     }
     header {
-      background: linear-gradient(120deg, #0052cc, #0078ff);
+      background: linear-gradient(135deg, #0078ff, #00b4ff);
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 50px 20px;
     }
     header img {
-      width: 80px;
+      width: 90px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 2.5em;
+    }
+    h2 {
+      color: #004aad;
       margin-bottom: 15px;
     }
     section {
       padding: 40px 20px;
-      max-width: 960px;
+      max-width: 1000px;
       margin: auto;
     }
-    h2 {
-      border-left: 4px solid #0078ff;
-      padding-left: 10px;
-      margin-bottom: 20px;
+    .about, .services, .contact {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
     }
     .services ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
       list-style: none;
       padding: 0;
+      margin: 0;
     }
     .services li {
-      background: white;
-      margin-bottom: 10px;
-      padding: 12px 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    .contact {
-      background: #ffffff;
-      padding: 30px;
+      background: #eef7ff;
+      padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .services img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+    .contact p {
+      margin: 8px 0;
     }
     input, textarea {
       width: 100%;
@@ -91,27 +102,28 @@
     <p>Complete Fixing Solution</p>
   </header>
 
-  <section>
+  <section class="about">
     <h2>About Us</h2>
-    <p>C Fix Solution is your one-stop destination for reliable, professional repair and installation services in Tiruppur. We specialize in air conditioners, washing machines, refrigerators, CCTV setups, and all types of electrical work.</p>
+    <p>C Fix Solution is your trusted local service provider for fast, efficient repairs and installations. We specialize in air conditioners, refrigerators, washing machines, CCTV, and all types of electrical work in Tiruppur.</p>
+    <img src="about.jpg" alt="Technician working" style="width:100%; border-radius:8px; margin-top:20px;">
   </section>
 
   <section class="services">
     <h2>Our Services</h2>
     <ul>
-      <li>Air Conditioner Installation & Service</li>
-      <li>Washing Machine Repair</li>
-      <li>Refrigerator Service</li>
-      <li>CCTV Installation</li>
-      <li>General Electrical Work</li>
+      <li><img src="icons/ac.png" alt="AC Icon">AC Installation & Service</li>
+      <li><img src="icons/washing-machine.png" alt="Washing Machine">Washing Machine Repair</li>
+      <li><img src="icons/fridge.png" alt="Fridge">Refrigerator Service</li>
+      <li><img src="icons/cctv.png" alt="CCTV">CCTV Installation</li>
+      <li><img src="icons/electrical.png" alt="Electrical">General Electrical Work</li>
     </ul>
   </section>
 
   <section class="contact">
     <h2>Contact Us</h2>
-    <p>Address: Shanu, Jawahar Nagar 4th Street, Kongu Main Road, Tiruppur 641607</p>
-    <p>Phone: 8610993317</p>
-    <p>Email: support@cfixsolution.com</p>
+    <p><strong>Address:</strong> Shanu, Jawahar Nagar 4th Street, Kongu Main Road, Tiruppur 641607</p>
+    <p><strong>Phone:</strong> 8610993317</p>
+    <p><strong>Email:</strong> support@cfixsolution.com</p>
     <form>
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
@@ -121,7 +133,7 @@
   </section>
 
   <footer>
-    &copy; 2025 C Fix Solution. All rights reserved.
+    &copy; 2025 C Fix Solution. Built with care and precision.
   </footer>
 </body>
 </html>
