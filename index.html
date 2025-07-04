@@ -1,49 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>C Fix Solution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f7fc;
-      color: #1a1a1a;
+      background: linear-gradient(to bottom right, #e0f7fa, #f1f8ff);
+      color: #222;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
-      background: linear-gradient(135deg, #0078ff, #00b4ff);
+      background: linear-gradient(120deg, #0078ff, #00b4ff);
       color: white;
       text-align: center;
       padding: 50px 20px;
     }
     header img {
       width: 90px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      margin-bottom: 5px;
     }
     h2 {
       color: #004aad;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      font-size: 1.8em;
     }
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .about, .services, .contact {
+    .card {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .services ul {
       display: grid;
@@ -51,13 +58,18 @@
       gap: 20px;
       list-style: none;
       padding: 0;
-      margin: 0;
     }
     .services li {
-      background: #eef7ff;
+      background: #fff0f5;
+      border-left: 5px solid #ff4081;
       padding: 15px;
       border-radius: 8px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: background 0.3s;
+    }
+    .services li:hover {
+      background: #ffe4ec;
     }
     .services img {
       width: 50px;
@@ -68,72 +80,76 @@
     }
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 6px;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 16px;
     }
     button {
-      padding: 12px 25px;
+      padding: 12px 30px;
       background: #0078ff;
       color: white;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      border-radius: 8px;
       font-size: 16px;
-      transition: background 0.3s ease;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
     }
     button:hover {
       background: #005ecb;
     }
+    button:active {
+      transform: scale(0.97);
+      background: #003d99;
+    }
     footer {
       text-align: center;
       padding: 20px;
-      background: #1a1a1a;
+      background: #222;
       color: white;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="C Fix Solution Logo">
+    <img src="logo.png" alt="C Fix Solution Logo" />
     <h1>C Fix Solution</h1>
     <p>Complete Fixing Solution</p>
   </header>
 
-  <section class="about">
+  <section class="card about">
     <h2>About Us</h2>
-    <p>C Fix Solution is your trusted local service provider for fast, efficient repairs and installations. We specialize in air conditioners, refrigerators, washing machines, CCTV, and all types of electrical work in Tiruppur.</p>
-    <img src="about.jpg" alt="Technician working" style="width:100%; border-radius:8px; margin-top:20px;">
+    <p>C Fix Solution is your trusted expert for fast, efficient repairs and installations. We handle ACs, fridges, washing machines, CCTV systems, and general electrical work — all under one roof in Tiruppur.</p>
+    <img src="about.jpg" alt="Technician working" style="width:100%; border-radius:8px; margin-top:20px;" />
   </section>
 
-  <section class="services">
+  <section class="card services">
     <h2>Our Services</h2>
     <ul>
-      <li><img src="icons/ac.png" alt="AC Icon">AC Installation & Service</li>
-      <li><img src="icons/washing-machine.png" alt="Washing Machine">Washing Machine Repair</li>
-      <li><img src="icons/fridge.png" alt="Fridge">Refrigerator Service</li>
-      <li><img src="icons/cctv.png" alt="CCTV">CCTV Installation</li>
-      <li><img src="icons/electrical.png" alt="Electrical">General Electrical Work</li>
+      <li><img src="icons/ac.png" alt="AC Icon" />AC Installation & Service</li>
+      <li><img src="icons/washing-machine.png" alt="Washing Machine" />Washing Machine Repair</li>
+      <li><img src="icons/fridge.png" alt="Fridge" />Refrigerator Service</li>
+      <li><img src="icons/cctv.png" alt="CCTV" />CCTV Installation</li>
+      <li><img src="icons/electrical.png" alt="Electrical" />General Electrical Work</li>
     </ul>
   </section>
 
-  <section class="contact">
+  <section class="card contact">
     <h2>Contact Us</h2>
     <p><strong>Address:</strong> Shanu, Jawahar Nagar 4th Street, Kongu Main Road, Tiruppur 641607</p>
     <p><strong>Phone:</strong> 8610993317</p>
     <p><strong>Email:</strong> support@cfixsolution.com</p>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 C Fix Solution. Built with care and precision.
+    &copy; 2025 C Fix Solution. All rights reserved.
   </footer>
 </body>
 </html>
